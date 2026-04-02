@@ -36,10 +36,30 @@
       <a href="#services" data-en="Services" data-zh="服务"></a>
       <a href="#stats" data-en="Performance" data-zh="成果"></a>
       <a href="#contact" data-en="Contact" data-zh="联系"></a>
+          <button id="langToggle">中文</button>
     </nav>
 
-    <button id="langToggle">中文</button>
+     <button id="hamburger">☰</button>
   </div>
+  <div id="mobileMenu" class="mobile-menu">
+
+  <div class="mobile-content">
+
+    <span class="close-menu" onclick="closeMenu()">×</span>
+
+    <nav class="mobile-nav">
+      <a href="#home" data-en="Home" data-zh="首页" onclick="closeMenu()"></a>
+      <a href="#services" data-en="Services" data-zh="服务" onclick="closeMenu()"></a>
+      <a href="#stats" data-en="Performance" data-zh="成果" onclick="closeMenu()"></a>
+      <a href="#contact" data-en="Contact" data-zh="联系" onclick="closeMenu()"></a>
+      <a href="consultancy.html" data-en="Start Consultation" data-zh="立即咨询" onclick="closeMenu()"></a>
+    </nav>
+
+    <button id="langToggleMobile">中文</button>
+
+  </div>
+
+</div>  
 </header>
 
 <section id="home" class="hero">
@@ -50,21 +70,20 @@
     <p data-en="Legal, tax, and business solutions built for serious investors."
        data-zh="为严肃投资者提供法律、税务和商业解决方案。"></p>
 <br>
-    <button class="btn" onclick="openPopup()"
-      data-en="Start Consultation"
-      data-zh="立即咨询"></button>
+      <a href="consultancy.html" class="btn lang" data-en="Start Consultation"
+      data-zh="立即咨询"></a>
   </div>
 </section>
 
 <section id="stats" class="section dark">
   <div class="container grid">
     <div class="stat">
-      <h2 class="counter" data-target="250">0</h2>
+      <h2 class="counter" data-target="169">0</h2>
       <p data-en="Clients Assisted" data-zh="服务客户"></p>
     </div>
 
     <div class="stat">
-      <h2 class="counter" data-target="120">0</h2>
+      <h2 class="counter" data-target="87">0</h2>
       <p data-en="Companies Registered" data-zh="注册公司"></p>
     </div>
 
