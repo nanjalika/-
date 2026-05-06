@@ -3,69 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>中坦达资 | INVEST IN TANZANIA</title>
+  <title>中坦达资 | INVESTING IN TANZANIA</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   
   <style>
-    .opportunity-card {
-        background: var(--navy-light);
-        border-radius: 12px;
-        overflow: hidden;
-        margin-bottom: 30px;
+    /* Custom styles for the two-button arrangement on index */
+    .button-container {
         display: flex;
-        flex-direction: column;
-        transition: transform 0.3s;
+        justify-content: center;
+        gap: 40px;
+        padding-top: 75px;
+        background: transparent;
     }
-    .opportunity-card:hover { transform: translateY(-5px); }
-    .opp-image {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
-    .opp-content { padding: 25px; }
-    .tag {
-        background: var(--white);
-        color: var(--navy);
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
+    .btn-large {
+        min-width: 200px;
+        font-size: 1.2rem !important;
         font-weight: bold;
         text-transform: uppercase;
-        display: inline-block;
-        margin-bottom: 10px;
     }
-    .link-box {
-        margin-top: 15px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        padding-top: 15px;
-    }
-    .external-link {
-        color: var(--paleblue);
-        text-decoration: none;
-        font-size: 0.9rem;
-    }
-    .external-link:hover { text-decoration: underline; }
   </style>
 </head>
-
 <body>
 
 <header class="header">
   <div class="container flex">
     <div class="logo">
         <img src="images/logo.png" alt="中坦达资logo">
-        <h2 data-en="Zhongtan Dazi" data-zh="中坦达资">中坦达资</h2>
+        <h2>中坦达资</h2>
     </div>
 
     <nav>
       <a href="index.html" data-en="Home" data-zh="首页"></a>
       <a href="services.html" data-en="Services" data-zh="服务"></a>
-      <a href="tanzania.html" data-en="Tanzania" data-zh="坦桑尼亚"></a>
-      <a href="contact.html" data-en="Contact Us" data-zh="联系我们"></a>
+      <a href="tanzania.html" class="active" data-en="Tanzania" data-zh="坦桑尼亚"></a>
+      <a href="contact.html" data-en="Contact us" data-zh="联系我们"></a>
       <button id="langToggle">中文</button>
     </nav>
-    <button id="hamburger">☰</button>
+
+     <button id="hamburger">☰</button>
   </div>
 
   <div id="mobileMenu" class="mobile-menu">
@@ -74,28 +50,194 @@
       <nav class="mobile-nav">
         <a href="index.html" data-en="Home" data-zh="首页" onclick="closeMenu()"></a>
         <a href="services.html" data-en="Services" data-zh="服务" onclick="closeMenu()"></a>
-        <a href="tanzania.html" data-en="Tanzania" data-zh="坦桑尼亚" onclick="closeMenu()"></a>
-        <a href="contact.html" data-en="Contact Us" data-zh="联系我们" onclick="closeMenu()"></a>
+        <a href="tanzania.html" class="active" data-en="Tanzania" data-zh="坦桑尼亚" onclick="closeMenu()"></a>
+        <a href="contact.html" data-en="Contact us" data-zh="联系我们" onclick="closeMenu()"></a>
       </nav>
       <button id="langToggleMobile">中文</button>
     </div>
   </div>  
 </header>
+<div class="invest-page-container">
+    
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="lang-en">Why Tanzania? The Gateway to the Future of Africa</h1>
+            <h1 class="lang-zh">为何选择坦桑尼亚？通往非洲未来的门户</h1>
+            <p class="lang-en">With over 1,200 active Chinese projects, the question isn't "Why Tanzania?"—it's "Why haven't you started yet?"</p>
+            <p class="lang-zh">拥有超过1,200个活跃的中国项目，问题不再是“为什么选择坦桑尼亚？”，而是“为什么您还没有开始？”</p>
+        </div>
+        <div class="hero-image-space">
+            </div>
+    </section>
 
-<section class="section">
-  <div class="container">
-    <h1 style="text-align: center; font-size: 3rem; margin-bottom: 20px;" 
-        data-en="Invest in Tanzania" 
-        data-zh="投资坦桑尼亚"></h1>
-    <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;" 
-       data-en="Tanzania is one of Africa's fastest-growing economies. With a strategic location on the Indian Ocean and a market of 67 million people, it is the ideal gateway for Chinese investment in East Africa."
-       data-zh="坦桑尼亚是非洲增长最快的经济体之一。凭借印度洋的战略地位和6700万人口的市场，它是中国在东非投资的理想门户。"></p>
+    <section class="section-padding">
+        <h2 class="section-title lang-en">The "Big Three" Investment Pillars</h2>
+        <h2 class="section-title lang-zh">三大投资支柱</h2>
+        
+        <div class="pillars-grid">
+            <div class="pillar-card reveal">
+                <div class="image-placeholder"></div>
+                <h3 class="lang-en">1. Manufacturing</h3>
+                <h3 class="lang-zh">1. 工业与制造业</h3>
+                <p class="lang-en">Leveraging duty-free access to US and EU markets via the "Made in Tanzania" initiative.</p>
+                <p class="lang-zh">通过“坦桑尼亚制造”计划，利用免关税进入美国和欧盟市场的优势。</p>
+            </div>
 
-    <div class="grid">
-      <div class="opportunity-card">
-        <img src="images/tanzania-mining.jpg" alt="Mining" class="opp-image">
-        <div class="opp-content">
-          <span class="tag" data-en="Natural Resources" data-zh="自然资源"></span>
-          <h3 data-en="Mining & Processing" data-zh="矿业与加工"></h3>
-          <p data-en="Beyond extraction, the government now prioritizes 'Value Addition'. Opportunities exist in mineral refineries and processing centers for gold, graphite, and nickel."
-             data-zh="除了开采，政府现在优先考虑“增值”。黄金、石墨和镍的精
+            <div class="pillar-card reveal">
+                <div class="image-placeholder"></div>
+                <h3 class="lang-en">2. Mining & Blue Economy</h3>
+                <h3 class="lang-zh">2. 矿业与蓝色经济</h3>
+                <p class="lang-en">Tanzania is the 4th largest gold producer in Africa with untapped Graphite and Lithium reserves.</p>
+                <p class="lang-zh">坦桑尼亚是非洲第四大黄金生产国，拥有未开发的石墨和锂储量。</p>
+            </div>
+
+            <div class="pillar-card reveal">
+                <div class="image-placeholder"></div>
+                <h3 class="lang-en">3. Infrastructure</h3>
+                <h3 class="lang-zh">3. 基础设施与物流</h3>
+                <p class="lang-en">Key partner in the Belt and Road Initiative, connecting 6 landlocked countries to the ocean.</p>
+                <p class="lang-zh">“一带一路”倡议的关键伙伴，将6个内陆国家与海洋紧密相连。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding grey-bg">
+        <h2 class="section-title lang-en">Investor-First Policies</h2>
+        <h2 class="section-title lang-zh">投资者优先政策</h2>
+        
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="lang-en">TIC "One-Stop Shop"</span>
+                    <span class="lang-zh">TIC“一站式”服务中心</span>
+                </div>
+                <div class="accordion-content">
+                    <p class="lang-en">Register your business, get your tax ID, and secure work permits all in one place.</p>
+                    <p class="lang-zh">在一处即可办理企业注册、获取税务登记号并申请工作许可。</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <span class="lang-en">Tax Incentives & SEZs</span>
+                    <span class="lang-zh">税收优惠与特别经济区</span>
+                </div>
+                <div class="accordion-content">
+                    <p class="lang-en">0% import duty on project capital goods and ready-to-use industrial parks.</p>
+                    <p class="lang-zh">对项目资本货物免征进口关税，并提供即租即用的工业园区。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <h2 class="section-title lang-en">The Tanzania Advantage</h2>
+        <h2 class="section-title lang-zh">坦桑尼亚的优势</h2>
+        
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="lang-en">Feature</th><th class="lang-zh">特征</th>
+                        <th class="lang-en">The Tanzania Difference</th><th class="lang-zh">坦桑尼亚的独特之处</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b class="lang-en">Stability</b><b class="lang-zh">稳定性</b></td>
+                        <td class="lang-en">Over 60 years of uninterrupted peace.</td>
+                        <td class="lang-zh">超过60年未中断的和平政局。</td>
+                    </tr>
+                    <tr>
+                        <td><b class="lang-en">Zero-Tariff</b><b class="lang-zh">零关税</b></td>
+                        <td class="lang-en">China’s 98% zero-tariff policy on Tanzanian products.</td>
+                        <td class="lang-zh">中国对坦桑尼亚98%的产品实行零关税政策。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2 class="lang-en">Ready to grow with Zhongtandazi?</h2>
+            <h2 class="lang-zh">准备好与中坦达资共同成长吗？</h2>
+            <button class="cta-button lang-en">Contact Our Investment Desk</button>
+            <button class="cta-button lang-zh">联系我们的投资部门</button>
+        </div>
+    </section>
+</div>
+
+
+<footer class="footer">
+  <p>
+    <a href="#" onclick="openTerms()" data-en="Terms & Conditions" data-zh="条款和条件">Terms & Conditions</a> |
+    <a href="#" onclick="openPrivacy()" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a>
+  </p>
+   <p>Dar es Salaam, Tanzania  ©️ 2026 中坦达资</p>
+</footer>
+
+<div id="termsPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeTerms()">×</span>
+    <h3>Terms & Conditions</h3>
+    <p>This company is a private consultancy firm...</p>
+  </div>
+</div>
+
+<div id="privacyPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePrivacy()">×</span>
+    <h3 data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</h3>
+    <p data-en="At Zhong Tan Da Zi, we respect your privacy and protect your personal information you share with us when providing professional legal, tax and business consultancy services in Tanzania." data-zh="在中坦达资，我们尊重您的隐私并保护您在我们提供坦桑尼亚专业法律、税务和商业咨询服务时分享的个人信息。">At Zhong Tan Da Zi, we respect your privacy and protect your personal information you share with us when providing professional legal, tax and business consultancy services in Tanzania.</p>
+
+    <div class="policy-section">
+      <h4 data-en="What we collect" data-zh="我们收集的信息">What we collect</h4>
+      <ul>
+        <li data-en="Name, contact details and company information" data-zh="姓名、联系方式和公司信息">Name, contact details and company information</li>
+        <li data-en="Identity documents, visa and work permit data" data-zh="身份证件、签证和工作许可资料">Identity documents, visa and work permit data</li>
+        <li data-en="Business plans, tax details and legal filings" data-zh="商业计划、税务信息和法律申报资料">Business plans, tax details and legal filings</li>
+        <li data-en="Communications and documents required for service delivery" data-zh="服务所需的沟通记录和文件">Communications and documents required for service delivery</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h4 data-en="Why we collect it" data-zh="我们为什么收集">Why we collect it</h4>
+      <ul>
+        <li data-en="To deliver company registration, tax and legal support" data-zh="为提供公司注册、税务和法律支持">To deliver company registration, tax and legal support</li>
+        <li data-en="To prepare applications, filings and client documents" data-zh="为准备申请、申报和客户文件">To prepare applications, filings and client documents</li>
+        <li data-en="To communicate clearly and manage ongoing services" data-zh="为清晰沟通并管理持续服务">To communicate clearly and manage ongoing services</li>
+        <li data-en="To comply with Tanzanian regulatory and accounting needs" data-zh="为遵守坦桑尼亚监管和会计要求">To comply with Tanzanian regulatory and accounting needs</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h4 data-en="How we protect it" data-zh="我们如何保护信息">How we protect it</h4>
+      <ul>
+        <li data-en="We keep client information confidential" data-zh="我们将客户信息保密">We keep client information confidential</li>
+        <li data-en="Only authorized staff access your data" data-zh="只有授权人员可以访问您的数据">Only authorized staff access your data</li>
+        <li data-en="We store information securely and responsibly" data-zh="我们安全且负责地存储信息">We store information securely and responsibly</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h4 data-en="Data sharing" data-zh="数据共享">Data sharing</h4>
+      <ul>
+        <li data-en="We do not sell or rent your personal data" data-zh="我们不会出售或出租您的个人数据">We do not sell or rent your personal data</li>
+        <li data-en="We may share information with authorities or partners only when needed to complete service delivery" data-zh="我们仅在完成服务交付所需时与主管部门或合作伙伴共享信息">We may share information with authorities or partners only when needed to complete service delivery</li>
+        <li data-en="We obtain your approval before sharing data outside the company unless legally required" data-zh="除非法律要求，否则我们会在共享公司外信息前征得您的同意">We obtain your approval before sharing data outside the company unless legally required</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h4 data-en="Your rights" data-zh="您的权利">Your rights</h4>
+      <ul>
+        <li data-en="You can request access, correction or deletion of your information" data-zh="您可以请求访问、更正或删除您的信息">You can request access, correction or deletion of your information</li>
+        <li data-en="Contact us anytime to update your details or ask privacy questions" data-zh="随时联系我们以更新您的信息或咨询隐私问题">Contact us anytime to update your details or ask privacy questions</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

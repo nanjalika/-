@@ -1,71 +1,98 @@
-// PERSISTENT LANGUAGE STATE
+// --- 1. PERSISTENT LANGUAGE STATE & LOGIC ---
 let lang = localStorage.getItem('siteLang') || 'zh';
 
 function applyLanguage() {
-  // Save selection to storage
   localStorage.setItem('siteLang', lang);
 
-  // Update text for all elements with data-en/data-zh
+  // A. Class-based toggle (For the new Tanzania page CSS)
+  if (lang === 'zh') {
+    document.body.classList.add('zh');
+  } else {
+    document.body.classList.remove('zh');
+  }
+
+  // B. Data-attribute toggle (For your other pages)
   document.querySelectorAll("[data-en]").forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
 
-  // Update placeholders (for forms)
+  // C. Placeholder updates
   document.querySelectorAll("[placeholder]").forEach(el => {
-    // Only update if we have defined specific translations for placeholders 
-    // or use a simple logic: "en" uses the first part, "zh" uses the second part of a split
-    // For simplicity, let's target data attributes if you add them:
     if(el.hasAttribute(`data-${lang}-placeholder`)) {
         el.setAttribute('placeholder', el.getAttribute(`data-${lang}-placeholder`));
     }
   });
 
-  // Update Button Labels
+  // D. Update Button Labels
   const btn = document.getElementById("langToggle");
   const btnMob = document.getElementById("langToggleMobile");
   if(btn) btn.textContent = (lang === "en" ? "中文" : "EN");
   if(btnMob) btnMob.textContent = (lang === "en" ? "中文" : "EN");
 }
 
-// TOGGLE HANDLERS
-if(document.getElementById("langToggle")) {
-    document.getElementById("langToggle").onclick = () => {
-        lang = (lang === "en" ? "zh" : "en");
-        applyLanguage();
-    };
-}
+// Language Toggle Listeners
+const setupLangToggles = () => {
+    const toggles = ["langToggle", "langToggleMobile"];
+    toggles.forEach(id => {
+        const el = document.getElementById(id);
+        if(el) {
+            el.onclick = () => {
+                lang = (lang === "en" ? "zh" : "en");
+                applyLanguage();
+            };
+        }
+    });
+};
 
-if(document.getElementById("langToggleMobile")) {
-    document.getElementById("langToggleMobile").onclick = () => {
-        lang = (lang === "en" ? "zh" : "en");
-        applyLanguage();
-    };
-}
+// --- 2. NEW: ACCORDION LOGIC (For Tanzania Policies) ---
+const setupAccordions = () => {
+    document.querySelectorAll('.accordion-item').forEach(item => {
+        item.addEventListener('click', () => {
+            // Optional: Close other items when one opens
+            // document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+            item.classList.toggle('active');
+        });
+    });
+};
 
-// INITIALIZE ON LOAD
-window.addEventListener('DOMContentLoaded', applyLanguage);
+// --- 3. NEW: SCROLL REVEAL ANIMATION (For All Pages) ---
+const setupScrollReveal = () => {
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Matches your CSS .visible
+            }
+        });
+    }, observerOptions);
 
-// --- OTHER FUNCTIONS (POPUPS, SLIDERS, COUNTERS) ---
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+};
 
+// --- 4. EXISTING FUNCTIONS (Popups & Menus) ---
 function openPopup() { document.getElementById("popup").style.display = "block"; }
 function closePopup() { document.getElementById("popup").style.display = "none"; }
-
 function openTerms() { document.getElementById("termsPopup").style.display = "block"; }
 function closeTerms() { document.getElementById("termsPopup").style.display = "none"; }
-
 function openPrivacy() { document.getElementById("privacyPopup").style.display = "block"; }
 function closePrivacy() { document.getElementById("privacyPopup").style.display = "none"; }
-
 function openMenu() { document.getElementById("mobileMenu").style.display = "flex"; }
 function closeMenu() { document.getElementById("mobileMenu").style.display = "none"; }
 
-if(document.getElementById("hamburger")) {
-    document.getElementById("hamburger").onclick = openMenu;
-}
+// --- 5. INITIALIZATION ON LOAD ---
+window.addEventListener('DOMContentLoaded', () => {
+    applyLanguage();
+    setupLangToggles();
+    setupAccordions();   // Initialize new Accordions
+    setupScrollReveal(); // Initialize new Animations
 
-// ANIMATED COUNTERS
-const counters = document.querySelectorAll(".counter");
-if(counters.length > 0) {
+    // Hamburger Menu
+    if(document.getElementById("hamburger")) {
+        document.getElementById("hamburger").onclick = openMenu;
+    }
+
+    // Animated Counters
+    const counters = document.querySelectorAll(".counter");
     counters.forEach(counter => {
         let update = () => {
             let target = +counter.getAttribute("data-target");
@@ -80,61 +107,43 @@ if(counters.length > 0) {
         };
         update();
     });
-}
 
-// TESTIMONIAL ROTATION
-let t = document.querySelectorAll(".testimonial");
-if(t.length > 0) {
-    let i = 0;
-    setInterval(() => {
-        t.forEach(el => el.classList.remove("active"));
-        t[i].classList.add("active");
-        i = (i + 1) % t.length;
-    }, 4000);
-}
+    // Testimonial Rotation
+    let testimonials = document.querySelectorAll(".testimonial");
+    if(testimonials.length > 0) {
+        let i = 0;
+        setInterval(() => {
+            testimonials.forEach(el => el.classList.remove("active"));
+            testimonials[i].classList.add("active");
+            i = (i + 1) % testimonials.length;
+        }, 4000);
+    }
 
-// SLIDER (For Contact Page)
-let slides = document.querySelectorAll(".slide");
-if(slides.length > 0) {
-    let index = 0;
-    setInterval(() => {
-        slides.forEach(s => s.classList.remove("active"));
-        slides[index].classList.add("active");
-        index = (index + 1) % slides.length;
-    }, 2500);
-}
+    // Slider Logic
+    let slides = document.querySelectorAll(".slide");
+    if(slides.length > 0) {
+        let index = 0;
+        setInterval(() => {
+            slides.forEach(s => s.classList.remove("active"));
+            slides[index].classList.add("active");
+            index = (index + 1) % slides.length;
+        }, 2500);
+    }
 
-// SERVICES PAGE SECTION NAVIGATION BUTTONS
-const pageInner = document.querySelector(".page-inner");
-const sectionButtons = document.querySelectorAll(".page-screen");
-const scrollUp = document.getElementById("scrollUp");
-const scrollDown = document.getElementById("scrollDown");
-if (pageInner && scrollUp && scrollDown && sectionButtons.length > 0) {
-    let currentSection = 0;
-
-    const updateButtons = () => {
-        scrollUp.disabled = currentSection === 0;
-        scrollDown.disabled = currentSection === sectionButtons.length - 1;
-    };
-
-    const updateSections = () => {
-        pageInner.style.transform = `translateY(-${currentSection * 100}vh)`;
-        updateButtons();
-    };
-
-    scrollUp.addEventListener("click", () => {
-        if (currentSection > 0) {
-            currentSection -= 1;
-            updateSections();
-        }
-    });
-
-    scrollDown.addEventListener("click", () => {
-        if (currentSection < sectionButtons.length - 1) {
-            currentSection += 1;
-            updateSections();
-        }
-    });
-
-    updateSections();
-}
+    // Services Page Navigation
+    const pageInner = document.querySelector(".page-inner");
+    const sectionButtons = document.querySelectorAll(".page-screen");
+    const scrollUp = document.getElementById("scrollUp");
+    const scrollDown = document.getElementById("scrollDown");
+    if (pageInner && scrollUp && scrollDown && sectionButtons.length > 0) {
+        let currentSection = 0;
+        const updateSections = () => {
+            pageInner.style.transform = `translateY(-${currentSection * 100}vh)`;
+            scrollUp.disabled = currentSection === 0;
+            scrollDown.disabled = currentSection === sectionButtons.length - 1;
+        };
+        scrollUp.addEventListener("click", () => { if (currentSection > 0) { currentSection--; updateSections(); }});
+        scrollDown.addEventListener("click", () => { if (currentSection < sectionButtons.length - 1) { currentSection++; updateSections(); }});
+        updateSections();
+    }
+});
