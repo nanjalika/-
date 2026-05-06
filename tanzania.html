@@ -58,38 +58,44 @@
   </div>  
 </header>
 <div class="invest-page-container">
-    
+    <!-- Hero SLIDESHOWS Section -->
     <section class="hero-section">
+                <div class="hero-slideshow">
+          <img src="../../GitHub/cn.tz/images/1.jpg" class="hero-slide active" alt="Tanzania Investment 1">
+          <img src="../../GitHub/cn.tz/images/2.jpg" class="hero-slide" alt="Tanzania Investment 2">
+          <img src="../../GitHub/cn.tz/images/3.jpg" class="hero-slide" alt="Tanzania Investment 3">
+            </div>
         <div class="hero-content">
             <h1 data-en="Why Tanzania? The Gateway to the Future of Africa" data-zh="为何选择坦桑尼亚？通往非洲未来的门户">Why Tanzania? The Gateway to the Future of Africa</h1>
             <p data-en="With over 1,200 active Chinese projects, the question isn't Why Tanzania? —it is Why haven not you started yet?" data-zh="拥有超过1,200个活跃的中国项目，问题不再是“为什么选择坦桑尼亚?”，而是“为什么您还没有开始?”"></p>
              
         </div>
-        <div class="hero-image-space">
-            </div>
     </section>
 
     <section class="section-padding">
         <h2 class="section-title"  data-en="The 'Big Three' Investment Pillars" data-zh="'三大' 投资支柱"></h2>
         
-        
+        <!-- HERO Pillars WITH POPUPS -->
         <div class="pillars-grid">
             <div class="pillar-card reveal">
                 <div class="image-placeholder"></div>
                 <h3 class="lang-en" data-en="1. Manufacturing" data-zh="1. 工业与制造业"></h3>
                 <p class="lang-en" data-en="Leveraging duty-free access to US and EU markets via the 'Made in Tanzania' initiative." data-zh="通过'坦桑尼亚制造'计划，利用免关税进入美国和欧盟市场的优势。"></p>
+                <button href="javascript:void(0);" class="read-more-btn" data-id="manufacturing" data-en="Read more" data-zh="了解更多"></button>
             </div>
 
             <div class="pillar-card reveal">
                 <div class="image-placeholder"></div>
                 <h3 class="lang-en" data-en="2. Mining & Blue Economy" data-zh="2. 矿业与蓝色经济"></h3>
                 <p class="lang-en" data-en="Tanzania is the 4th largest gold producer in Africa with untapped Graphite and Lithium reserves." data-zh="坦桑尼亚是非洲第四大黄金生产国，拥有未开发的石墨和锂储量。"></p>
+                <button href="javascript:void(0);" class="read-more-btn" data-id="mining" data-en="Read more" data-zh="了解更多"></button>
             </div>
 
             <div class="pillar-card reveal">
                 <div class="image-placeholder"></div>
                 <h3 class="lang-en" data-en="3. Infrastructure" data-zh="3. 基础设施与物流"></h3>
                 <p class="lang-en" data-en="Key partner in the Belt and Road Initiative, connecting 6 landlocked countries to the ocean." data-zh="“一带一路”倡议的关键伙伴，将6个内陆国家与海洋紧密相连。"></p>
+                <button href="javascript:void(0);" class="read-more-btn" data-id="infrastructure" data-en="Read more" data-zh="了解更多"></button>
             </div>
         </div>
     </section>
@@ -225,5 +231,15 @@
 </div>
 
 <script src="script.js"></script>
+<!-- Sector Detail Popup -->
+<div id="sectorPopup" class="modal" style="display: none;">
+    <div class="modal-content reveal">
+        <span class="close-btn" onclick="closeSectorPopup()">&times;</span>
+        <h2 id="popupTitle" class="section-title"></h2>
+        <div id="popupBody" class="popup-text">
+            <!-- Dynamic content from sectorData injected here -->
+        </div>
+    </div>
+</div>
 </body>
 </html>
