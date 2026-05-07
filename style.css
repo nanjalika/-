@@ -766,3 +766,6 @@ body.modal-open {
     object-fit: cover;
     height: 200px;
 }
+.image-placeholder img{
+    width:fit-content
+}
