@@ -55,8 +55,8 @@ const sectorData = {
                 <p>Navigating the Mining Act and local content regulations requires expert guidance. We facilitate your <strong>Prospecting Licenses (PL)</strong>, <strong>Mining Licenses (ML)</strong>, and ensure your operations align with the latest Tanzanian tax and royalty frameworks.</p>
 
                 <div class="popup-gallery">
-                    <div class="gallery-item"><img src="images/mining1.jpg" alt="Mineral Processing Industry"></div>
-                    <div class="gallery-item"><img src="images/mining2.jpg" alt="Mineral Sample"></div>
+                    <div class="gallery-item"><img src="images/mining1.jpeg" alt="Mineral Processing Industry"></div>
+                    <div class="gallery-item"><img src="images/mining2.jpeg" alt="Mineral Sample"></div>
                 </div>
             `
         },
@@ -76,8 +76,8 @@ const sectorData = {
                 <p>遵循《矿业法》和本地化法规需要专家指导。我们协助您办理<strong>勘探许可证 (PL)</strong>、<strong>采矿许可证 (ML)</strong>，并确保您的运营符合坦桑尼亚最新的税务和特许权使用费框架。</p>
 
                 <div class="popup-gallery">
-                    <div class="gallery-item"><img src="images/mining1.jpg" alt="工厂"></div>
-                    <div class="gallery-item"><img src="images/mining2.jpg" alt="金子样品"></div>
+                    <div class="gallery-item"><img src="images/mining1.jpeg" alt="工厂"></div>
+                    <div class="gallery-item"><img src="images/mining2.jpeg" alt="金子样品"></div>
                 </div>
             `
         }
