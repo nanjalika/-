@@ -97,8 +97,8 @@ const sectorData = {
                 </ul>
 
                 <div class="popup-gallery">
-                    <div class="gallery-item"><img src="images/sgr-train.jpg" alt="SGR Railway"></div>
-                    <div class="gallery-item"><img src="images/port-expansion.jpg" alt="Port of Dar es Salaam"></div>
+                    <div class="gallery-item"><img src="images/infrastructure1.jpeg" alt="SGR"></div>
+                    <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
                     <div class="gallery-item"><img src="images/bridge-construction.jpg" alt="Infrastructure Bridge"></div>
                 </div>
                 <p><em>Zhongtandazi provides the local legal framework, Joint Venture (JV) structures, and government liaison services required to win and execute major tenders.</em></p>
