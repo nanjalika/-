@@ -17,10 +17,10 @@ const sectorData = {
                 </ul>
 
                 <div class="popup-gallery">
-                    <div class="gallery-item"><img src="images/factory-high-tech.jpg" alt="Industrial Hub"></div>
-                    <div class="gallery-item"><img src="images/logistics-speed.jpg" alt="Export Logistics"></div>
+                    <div class="gallery-item"><img src="images/manufacturing1.jpeg" alt="Industrial Hub"></div>
+                    <div class="gallery-item"><img src="images/manufacturing2.jpeg" alt="Agriculture"></div>
                 </div>
-                <p><em>Zhongtandazi handles every permit, from TIC certification to industrial land titles, ensuring your factory is operational in record time.</em></p>
+                <p><em>中坦达资 handles every permit, from TIC certification to industrial land titles, ensuring your factory is operational in record time.</em></p>
             `
         },
         "zh": {
