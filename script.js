@@ -88,7 +88,10 @@ const sectorData = {
             "body": `
                 <h4>The Great Transformation</h4>
                 <p>Tanzania is currently the site of the most ambitious infrastructure projects in East Africa. With over <strong>$15 Billion</strong> in active projects, we are building the gateway for the next century of African trade.</p>
-                
+                <div class="popup-gallery">
+                    <div class="gallery-item"><img src="images/infrastructure1.jpeg" alt="SGR"></div>
+                    <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
+                </div> <br>
                 <h4>High-Value Sectors for Entry:</h4>
                 <ul>
                     <li><strong>Transport & Logistics:</strong> The $10B Standard Gauge Railway (SGR) and Dar es Salaam Port expansion are creating massive opportunities for specialized engineering firms.</li>
