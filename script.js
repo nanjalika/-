@@ -91,7 +91,8 @@ const sectorData = {
                 <div class="popup-gallery">
                     <div class="gallery-item"><img src="images/infrastructure1.jpeg" alt="SGR"></div>
                     <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
-                </div> <br>
+                </div>
+                <br><br>
                 <h4>High-Value Sectors for Entry:</h4>
                 <ul>
                     <li><strong>Transport & Logistics:</strong> The $10B Standard Gauge Railway (SGR) and Dar es Salaam Port expansion are creating massive opportunities for specialized engineering firms.</li>
@@ -104,7 +105,7 @@ const sectorData = {
                     <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
                     <div class="gallery-item"><img src="images/bridge-construction.jpg" alt="Infrastructure Bridge"></div>
                 </div>
-                <p><em>Zhongtandazi provides the local legal framework, Joint Venture (JV) structures, and government liaison services required to win and execute major tenders.</em></p>
+                <p><em>中坦达资 provides the local legal framework, Joint Venture (JV) structures, and government liaison services required to win and execute major tenders.</em></p>
             `
         },
         "zh": {
