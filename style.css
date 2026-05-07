@@ -619,7 +619,7 @@ section {
 }
 
 .cta-button:hover {
-    background: var(--paleblue);
+    border: 1px solid var(--paleblue);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
