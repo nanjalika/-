@@ -35,6 +35,11 @@ const sectorData = {
                     <li><strong>中坦贸易走廊：</strong> 充分利用坦桑尼亚出口中国产品98%零关税的特殊政策。</li>
                     <li><strong>运营稳定性：</strong> 拥有年轻、可塑性强的劳动力，以及尼雷尔水电站带来的充足工业电力保障。</li>
                 </ul>
+                <div class="popup-gallery">
+                    <div class="gallery-item"><img src="images/manufacturing1.jpeg" alt="工业园区"></div>
+                    <div class="gallery-item"><img src="images/manufacturing2.jpeg" alt="农业"></div>
+                </div>
+                <p><em>中坦达资处理从TIC认证到工业用地所有权的每一个许可，确保您的工厂以创纪录的速度投入运营。</em></p>
             `
         }
     },
@@ -51,13 +56,13 @@ const sectorData = {
                     <li><strong>Value Addition:</strong> The government is offering major incentives for local mineral processing and smelting facilities.</li>
                 </ul>
 
-                <h4>How We Secure Your Investment</h4>
-                <p>Navigating the Mining Act and local content regulations requires expert guidance. We facilitate your <strong>Prospecting Licenses (PL)</strong>, <strong>Mining Licenses (ML)</strong>, and ensure your operations align with the latest Tanzanian tax and royalty frameworks.</p>
-
                 <div class="popup-gallery">
                     <div class="gallery-item"><img src="images/mining1.jpeg" alt="Mineral Processing Industry"></div>
                     <div class="gallery-item"><img src="images/mining2.jpeg" alt="Mineral Sample"></div>
-                </div>
+                </div><br><br>
+
+                <h4>How We Secure Your Investment</h4>
+                <p>Navigating the Mining Act and local content regulations requires expert guidance. We facilitate your <strong>Prospecting Licenses (PL)</strong>, <strong>Mining Licenses (ML)</strong>, and ensure your operations align with the latest Tanzanian tax and royalty frameworks.</p>
             `
         },
         "zh": {
@@ -72,13 +77,13 @@ const sectorData = {
                     <li><strong>增值加工：</strong> 政府正为设立当地矿产加工和冶炼设施提供重大优惠政策。</li>
                 </ul>
 
+                <div class="popup-gallery">
+                    <div class="gallery-item"><img src="images/mining1.jpeg" alt="矿产加工产业"></div>
+                    <div class="gallery-item"><img src="images/mining2.jpeg" alt="矿样"></div>
+                </div><br><br>
+                
                 <h4>我们如何保障您的投资</h4>
                 <p>遵循《矿业法》和本地化法规需要专家指导。我们协助您办理<strong>勘探许可证 (PL)</strong>、<strong>采矿许可证 (ML)</strong>，并确保您的运营符合坦桑尼亚最新的税务和特许权使用费框架。</p>
-
-                <div class="popup-gallery">
-                    <div class="gallery-item"><img src="images/mining1.jpeg" alt="工厂"></div>
-                    <div class="gallery-item"><img src="images/mining2.jpeg" alt="金子样品"></div>
-                </div>
             `
         }
     },
@@ -86,14 +91,11 @@ const sectorData = {
         "en": {
             "title": "Infrastructure: Engineering the Future of African Logistics",
             "body": `
-                <h4>The Great Transformation</h4>
+                <h4>THE GREAT TRANSFORMATION</h4>
                 <p>Tanzania is currently the site of the most ambitious infrastructure projects in East Africa. With over <strong>$15 Billion</strong> in active projects, we are building the gateway for the next century of African trade.</p>
-                <div class="popup-gallery">
-                    <div class="gallery-item"><img src="images/infrastructure1.jpeg" alt="SGR"></div>
-                    <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
-                </div>
-                <br><br>
-                <h4>High-Value Sectors for Entry:</h4>
+                <br>
+                <br>
+                <h4>HIGH-VALUE SECTORS FOR ENTRY:</h4>
                 <ul>
                     <li><strong>Transport & Logistics:</strong> The $10B Standard Gauge Railway (SGR) and Dar es Salaam Port expansion are creating massive opportunities for specialized engineering firms.</li>
                     <li><strong>Urban & Commercial Development:</strong> Unprecedented demand for Grade-A office spaces, industrial parks, and luxury hospitality in the diplomatic hub of Dar es Salaam.</li>
@@ -103,7 +105,6 @@ const sectorData = {
                 <div class="popup-gallery">
                     <div class="gallery-item"><img src="images/infrastructure1.jpeg" alt="SGR"></div>
                     <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
-                    <div class="gallery-item"><img src="images/bridge-construction.jpg" alt="Infrastructure Bridge"></div>
                 </div>
                 <p><em>中坦达资 provides the local legal framework, Joint Venture (JV) structures, and government liaison services required to win and execute major tenders.</em></p>
             `
@@ -120,6 +121,11 @@ const sectorData = {
                     <li><strong>城市与商业开发：</strong> 达累斯萨拉姆作为外交和商业中心，对甲级写字楼、工业园区和高端酒店的需求达到了前所未有的高度。</li>
                     <li><strong>能源与公用事业：</strong> 参与国家电网扩展计划，包括宏伟的尼雷尔水电站项目及可再生能源转型。</li>
                 </ul>
+                <div class="popup-gallery">
+                    <div class="gallery-item"><img src="images/infrastructure1.jpeg" alt="SGR"></div>
+                    <div class="gallery-item"><img src="images/infrastructure2.jpeg" alt="Port of Dar es Salaam"></div>
+                </div>
+                <p><em>中坦达资提供赢得和执行重大招标所需的本地法律框架、合资企业 (JV) 结构和政府联络服务。</em></p>
             `
         }
     }
