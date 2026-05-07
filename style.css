@@ -729,7 +729,7 @@ section {
 }
 
 .modal-content {
-    background: var(--navy-light);
+    background: var(--navy);
     margin: 5% auto;
     padding: 40px;
     width: 90%;
