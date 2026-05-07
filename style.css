@@ -766,6 +766,25 @@ body.modal-open {
     object-fit: cover;
     height: 200px;
 }
-.image-placeholder img{
-    width:fit-content
+/* 1. The Container: Sets a standard 'window' for the photo */
+.pillar-image-wrapper {
+    width: 100%;
+    height: 200px;       /* Keeps all pillars the same height */
+    overflow: hidden;    /* Cuts off any image parts that try to go outside */
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* 2. The Image: Forces it to fill the 'window' perfectly */
+.pillar-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* This is key: it crops the photo rather than stretching it */
+    display: block;
+    transition: transform 0.5s ease; /* Adds a nice zoom effect on hover */
+}
+
+/* 3. Extra touch: Zoom the photo slightly when you hover over the card */
+.pillar-card:hover .pillar-image-wrapper img {
+    transform: scale(1.1);
 }
