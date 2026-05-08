@@ -826,7 +826,7 @@ body.modal-open {
     text-decoration: none;
     color: #003366; /* Your Navy brand color */
     transition: all 0.3s ease;
-    border: 1px solid var;(--paleblue); /* Subtle Pale Blue border for a soft glow effect */
+    border: 1px solid var(--paleblue); /* Subtle Pale Blue border for a soft glow effect */
 }
 
 .contact-item:hover {
