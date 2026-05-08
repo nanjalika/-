@@ -814,19 +814,19 @@ body.modal-open {
 .contact-quick-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns for Desktop */
-    gap: 10px;
+    gap: 15px;
     margin: 20px;
 }
 
 .contact-item {
-    background: rgba(0, 51, 102, 0.05); /* Very light Navy tint to match your brand */
+    background: var(--navy); /* Very light Navy tint to match your brand */
     padding: 15px;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
     color: #003366; /* Your Navy brand color */
     transition: all 0.3s ease;
-    border: 1px solid rgba(0, 51, 102, 0.1);
+    border: 1px solid var;(--paleblue); /* Subtle Pale Blue border for a soft glow effect */
 }
 
 .contact-item:hover {

@@ -228,36 +228,146 @@
     </div>
   </div>
 </div>
-
 <div id="contactDeskPopup" class="popup">
-  <div class="popup-content">
+  <style>
+    /* Professional container constraints */
+    .contact-grid-content {
+        max-width: 600px !important;
+        text-align: center;
+    }
+
+    .contact-quick-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    /* UNIFIED CARD STYLE: Applied to all 4 cards */
+    .contact-item {
+        aspect-ratio: 1 / 1; 
+        cursor: pointer;
+        text-decoration: none;
+        perspective: 1000px;
+        border-radius: 12px;
+        background: rgba(0, 51, 102, 0.05); /* Unified Navy Tint */
+        border: 1px solid rgba(0, 51, 102, 0.1); /* Subtle Navy Border */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        color: #003366; /* Unified Navy Text */
+        position: relative;
+    }
+
+    /* UNIFIED HOVER: All cards now behave the same */
+    .contact-item:hover {
+        background: #ffffff;
+        border-color: #7ebce6; /* Unified Pale Blue Highlight */
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Flip Card Specific Mechanics */
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        border-radius: 12px;
+    }
+
+    .contact-item.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .flip-card-back {
+        background: #ffffff;
+        transform: rotateY(180deg);
+        border: 2px solid #7ebce6;
+    }
+
+    .flip-card-back img {
+        width: 80%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    /* Icon and Text Standardization */
+    .contact-icon { font-size: 2.5rem; margin-bottom: 10px; }
+    .contact-item h4 { margin: 5px 0; font-size: 1.1rem; font-weight: 600; }
+    .contact-item p { 
+        font-size: 0.9rem; 
+        opacity: 0.8; 
+        margin: 0; 
+        line-height: 1.4;
+    }
+    
+    .hint-text { 
+        font-size: 10px !important; 
+        margin-top: 8px !important; 
+        color: #7ebce6; /* Pale Blue for action hints */
+        font-weight: 500;
+    }
+
+    @media (max-width: 500px) {
+        .contact-quick-grid { grid-template-columns: 1fr; }
+        .contact-item { aspect-ratio: 1.8 / 1; }
+    }
+  </style>
+
+  <div class="popup-content contact-grid-content">
     <span class="close" onclick="closeContactDesk()">×</span>
-    <h3 data-en="Investment Desk" data-zh="投资咨询台">Investment Desk</h3>
-    <p data-en="Choose your preferred way to reach our experts." data-zh="选择您喜欢的沟通方式联系我们的专家。">Choose your preferred way to reach our experts.</p>
+    <h3 data-en="Choose your preferred way to reach our experts." data-zh="选择您喜欢的沟通方式联系我们的专家。">Choose your preferred way to reach our experts.</h3>
     
     <div class="contact-quick-grid">
         <a href="https://wa.me/255614749890" class="contact-item">
             <div class="contact-icon">📱</div>
             <h4 data-en="WhatsApp" data-zh="WhatsApp">WhatsApp</h4>
-            <p>+2556 1474 9890</p>
+            <p data-en="Quick Chat | Call" data-zh="快速聊天 | 通话">Quick Chat | Call</p>
         </a>
 
-        <div class="contact-item" onclick="alert('WeChat ID: Zhongtandazi')">
-            <div class="contact-icon">💬</div>
-            <h4 data-en="WeChat" data-zh="微信">WeChat</h4>
-            <p>ID: Zhongtandazi</p>
+        <div class="contact-item" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="contact-icon">💬</div>
+                    <h4 data-en="WeChat" data-zh="微信">WeChat</h4>
+                    <p data-en="Click to reveal the QR Code" data-zh="点击显示二维码">Click to reveal the QR Code</p>
+                    <p class="hint-text">ID: Zhongtandazi</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="images/wechat-qr.jpg" alt="WeChat QR">
+                    <p class="hint-text" data-en="(Click to go back)" data-zh="(点击返回)">(Click to go back)</p>
+                </div>
+            </div>
         </div>
 
         <a href="mailto:zhongtandazi@aol.com" class="contact-item">
             <div class="contact-icon">📧</div>
             <h4 data-en="Email" data-zh="电子邮件">Email</h4>
-            <p>zhongtandazi@aol.com</p>
+            <p data-en="Send an email" data-zh="发送电子邮件">Send an email</p>
         </a>
 
         <div class="contact-item">
             <div class="contact-icon">📍</div>
             <h4 data-en="Office" data-zh="办公地址">Office</h4>
-            <p>Dar es Salaam, Tanzania</p>
+            <p data-en="Navigate to us" data-zh="导航至我们">Navigate to us</p>
         </div>
     </div>
   </div>
