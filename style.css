@@ -636,7 +636,7 @@ section {
 /* Hero Slideshow Settings */
 .hero-section {
     position: relative;
-    height: 75vh; /* Fixed height for the hero area */
+    height: 70vh; /* Fixed height for the hero area */
     overflow: hidden;
 }
 
