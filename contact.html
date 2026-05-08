@@ -207,6 +207,144 @@
   </section>
 </main>
 
+
+<div id="contactDeskPopup" class="popup">
+  <style>
+    /* Popup Box adjustments */
+    .contact-grid-content {
+        max-width: 550px !important; 
+        padding: 40px 20px 20px 20px !important;
+        text-align: center;
+    }
+
+    /* Force the 2x2 Square Grid */
+    .contact-quick-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; 
+        margin-top: 10px;
+    }
+
+    /* BASE CARD STYLE: Unified for all cards */
+    .contact-item {
+        aspect-ratio: 1 / 1; 
+        cursor: pointer;
+        text-decoration: none;
+        perspective: 1000px; 
+        border-radius: 12px;
+        background: rgba(0, 51, 102, 0.05); 
+        border: 1px solid rgba(0, 51, 102, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        color: #003366;
+        position: relative;
+        overflow: hidden; /* Ensures flip stays inside rounded corners */
+    }
+
+    .contact-item:hover {
+        background: #ffffff;
+        border-color: #7ebce6; 
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Flipping Mechanics: This now forces the WeChat card to stay square */
+    .flip-card-inner {
+        position: absolute; /* Changed to absolute to fill the parent container */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+    }
+
+    .contact-item.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        top: 0;
+        left: 0;
+    }
+
+    .flip-card-back {
+        background: #ffffff;
+        transform: rotateY(180deg);
+        border-radius: 12px;
+        border: 1px solid #7ebce6;
+    }
+
+    .flip-card-back img {
+        width: 80%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    /* Icons and Text styles */
+    .contact-icon { font-size: 2.5rem; margin-bottom: 8px; }
+    .contact-item h4 { margin: 5px 0; font-size: 1.1rem; font-weight: 600; }
+    .contact-item p { font-size: 0.85rem; opacity: 0.8; margin: 0; line-height: 1.2; }
+
+    @media (max-width: 480px) {
+        .contact-quick-grid { gap: 10px; }
+        .contact-item { aspect-ratio: 1.2 / 1; } /* Keep them mostly square on mobile */
+        .contact-icon { font-size: 2rem; }
+    }
+  </style>
+
+  <div class="popup-content contact-grid-content">
+    <span class="close" onclick="closeContactDesk()">×</span>
+      <h3 data-en="Contact Desk" data-zh="联系台">Contact Desk</h3>
+    <div class="contact-quick-grid">
+        <a href="https://wa.me/255614749890" class="contact-item">
+            <div class="contact-icon">📱</div>
+            <h4 data-en="WhatsApp" data-zh="WhatsApp">WhatsApp</h4>
+            <p data-en="Quick Chat | Call" data-zh="快速聊天 | 通话">Quick Chat | Call</p>
+        </a>
+
+        <div class="contact-item" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="contact-icon">💬</div>
+                    <h4 data-en="WeChat" data-zh="微信">WeChat</h4>
+                    <p data-en="Click to reveal the QR Code" data-zh="点击显示二维码">Click to reveal the QR Code</p>
+                </div>
+                <div class="flip-card-back">
+                    <img src="images/wechat-qr.jpg" alt="WeChat QR">
+                </div>
+            </div>
+        </div>
+
+        <a href="mailto:zhongtandazi@aol.com" class="contact-item">
+            <div class="contact-icon">📧</div>
+            <h4 data-en="Email" data-zh="电子邮件">Email</h4>
+            <p data-en="Send an Email" data-zh="发送电子邮件">Send an Email</p>
+        </a>
+
+        <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <h4 data-en="Office" data-zh="办公地址">Office</h4>
+            <p data-en="Navigate to Us" data-zh="导航至我们">Navigate to Us</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+
 <footer class="footer">
   <p>
     <a href="#" onclick="openTerms()" data-en="Terms & Conditions" data-zh="条款和条件">Terms & Conditions</a> |
