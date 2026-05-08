@@ -92,8 +92,7 @@ nav a.active::after {
     right: 0;
     bottom: -8px;
     height: 3px;
-    background: var(--navy);
-   border: 1px solid var(--paleblue);
+    background: var(--paleblue);
     border-radius: 2px;
 }
 
@@ -165,7 +164,7 @@ nav a.active::after {
 button, .btn, .btn-download, input[type="submit"] {
     background: var(--white);
     color: var(--navy);
-    border: none;
+    border: 1px solid var(--paleblue);
     padding: 14px 28px;
     border-radius: 8px;
     cursor: pointer;
@@ -179,8 +178,15 @@ button, .btn, .btn-download, input[type="submit"] {
     transition: all 0.3s ease;
 }
 
+input[type="submit"] {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
 button:hover, .btn:hover, input[type="submit"]:hover {
-    background: var(--navy);
+    border: 1px solid var(--paleblue);
+    background: transparent;
+    color: var(--paleblue);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
@@ -193,6 +199,7 @@ button:hover, .btn:hover, input[type="submit"]:hover {
     text-align: center;
     padding: 40px 20px;
     border-top: 5px solid var(--paleblue);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .member-photo {
