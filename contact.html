@@ -5,6 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>中坦达资 | CONTACT US</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Modern Layout Fixes */
+    .two-column-layout {
+        display: flex;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .form-box {
+        flex: 7;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    .downloads-box {
+        flex: 3;
+        background: linear-gradient(145deg, var(--navy-light), var(--navy));
+        padding: 40px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(126, 188, 230, 0.2);
+    }
+
+    /* Fixed Textarea for better responsiveness */
+    textarea {
+        width: 100%;
+        min-height: 120px;
+        max-height: 120px;
+        resize: none;
+        background: rgba(11, 30, 60, 0.5) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 8px;
+        padding: 12px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    /* Quick Contact Button Adjustment */
+    .quick-contact-btn {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 12px;
+        background-color: var(--white);
+        color: var(--navy);
+        padding: 15px;
+        margin-top: 20px;
+        display: block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .quick-contact-btn:hover {
+        background-color: var(--paleblue);
+        transform: scale(1.02);
+    }
+
+    .agree-box {
+        font-size: 0.8rem;
+        opacity: 0.7;
+        text-align: center;
+    }
+
+    /* Leadership Modernization */
+    .team-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .member-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s ease;
+    }
+
+    .member-card:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: var(--paleblue);
+        transform: translateY(-10px);
+    }
+
+    @media (max-width: 900px) {
+        .two-column-layout { flex-direction: column; }
+        .form-box, .downloads-box { flex: none; width: 100%; }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,66 +121,74 @@
 </header>
 
 <main class="main-content">
-  <!-- SECTION: GET IN TOUCH (Form + Downloads in one row) -->
   <section class="section">
     <div class="container">
       <h2 class="main-section-title" data-en="Get in touch" data-zh="联系我们"></h2>
 
       <div class="two-column-layout">
-        <!-- COLUMN 1: FORM -->
         <div class="form-box">
           <h3 class="box-title" data-en="Fill the form below" data-zh="请填写以下表格"></h3>
           <form action="https://formspree.io/f/xrejbnjo" method="POST">
-        <input type="text" name="name" placeholder="Name / 姓名" required>
-        <input type="email" name="email" placeholder="Email / 邮箱" required>
+            <input type="text" name="name" placeholder="Name / 姓名" required>
+            <input type="email" name="email" placeholder="Email / 邮箱" required>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-        <select name="service" style="height: 37px; border-radius: 5px;" required>
-          <option value="" disabled selected data-en="Consulting For" data-zh="咨询服务类型"></option>
-          <option data-en="Company Registration" data-zh="公司注册"></option>
-          <option data-en="Legal Services" data-zh="法律服务"></option>
-          <option data-en="Tax and Auditing" data-zh="税务与审计"></option>
-          <option data-en="Investment Guidance" data-zh="投资指导"></option>
-          <option data-en="Other" data-zh="其他"></option>
-        </select>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <select name="service" style="height: 45px; border-radius: 8px; background: var(--navy); color: white; border: 1px solid rgba(255,255,255,0.2);" required>
+                <option value="" disabled selected data-en="Consulting For" data-zh="咨询服务类型"></option>
+                <option data-en="Company Registration" data-zh="公司注册"></option>
+                <option data-en="Legal Services" data-zh="法律服务"></option>
+                <option data-en="Tax and Auditing" data-zh="税务与审计"></option>
+                <option data-en="Investment Guidance" data-zh="投资指导"></option>
+                <option data-en="Other" data-zh="其他"></option>
+              </select>
 
-        <select name="location" style="height: 37px; border-radius: 5px;" required>
-          <option value="" disabled selected data-en="Select Location" data-zh="选择城市"></option>
-          <option data-en="Dar es Salaam" data-zh="达累斯萨拉姆"></option>
-          <option data-en="Arusha" data-zh="阿鲁沙"></option>
-          <option data-en="Mbeya" data-zh="姆贝亚"></option>
-          <option data-en="Dodoma" data-zh="多多马"></option>
-          <option data-en="Mwanza" data-zh="姆万扎"></option>
-          <option data-en="Other City" data-zh="其他城市"></option>
-        </select>
+              <select name="location" style="height: 45px; border-radius: 8px; background: var(--navy); color: white; border: 1px solid rgba(255,255,255,0.2);" required>
+                <option value="" disabled selected data-en="Select Location" data-zh="选择城市"></option>
+                <option data-en="Dar es Salaam" data-zh="达累斯萨拉姆"></option>
+                <option data-en="Arusha" data-zh="阿鲁沙"></option>
+                <option data-en="Mbeya" data-zh="姆贝亚"></option>
+                <option data-en="Dodoma" data-zh="多多马"></option>
+                <option data-en="Mwanza" data-zh="姆万扎"></option>
+                <option data-en="Other City" data-zh="其他城市"></option>
+              </select>
+            </div>
+            
+            <textarea name="message" placeholder="请详细说明您的需求"></textarea>
+            
+            <button type="submit" class="btn" style="width: 100%;" data-en="Submit Message" data-zh="提交申请"></button>
+          </form>
+
+          <div class="agree-box" style="margin-top: 20px;">
+            <span data-en="By submitting this form I agree to the terms and conditions." 
+                  data-zh="提交此表格即表示我同意相关条款与条件。"></span>
+          </div>
         </div>
-        <textarea name="message" style="min-height: 6rem; max-height: 6rem; min-width: 30rem; max-width: 34rem;" placeholder="请详细说明您的需求"></textarea>
-        <button type="submit" class="btn" style="width: 50%; margin-left: 25%;" data-en="Submit" data-zh="提交"></button>
-      </form>
 
-      <div class="agree-box" style="margin-top: 15px;">
-        <span data-en="By submitting this form I agree to the terms and conditions." 
-              data-zh="提交此表格即表示我同意相关条款与条件。"></span>
-      </div>
-    </div>
-
-        <!-- COLUMN 2: DOWNLOADABLES -->  
         <div class="downloads-box">
-          <h3 class="box-title" data-en="Downloadables" data-zh="资源与文档"></h3>
-          <div class="download-stack">
-              <a href="images/business-card.pdf" download class="btn-download"><span data-en="Business Card" data-zh="名片下载"></span></a>
-              <a href="images/inquiry-form.png" download class="btn-download" style="margin-bottom: 10px;"><span data-en="Inquiry Form" data-zh="咨询表"></span></a>
-              <a href="#" style="width: 50%; margin-left: 25%; text-decoration: none; font-weight: 700; border-radius: 10px; background-color: var(--white); color: var(--navy); padding: 10px; margin-top: 6rem;" data-en="QUICK CONTACT " data-zh="快速联系"></a>
+          <div>
+            <h3 class="box-title" data-en="Resources" data-zh="资源与文档"></h3>
+            <div class="download-stack">
+                <a href="images/business-card.pdf" download class="btn-download" style="width: 100%; margin-bottom: 15px;">
+                    <span data-en="Business Card" data-zh="名片下载"></span>
+                </a>
+                <a href="images/inquiry-form.png" download class="btn-download" style="width: 100%;">
+                    <span data-en="Inquiry Form" data-zh="咨询表"></span>
+                </a>
+            </div>
+          </div>
+
+          <div class="quick-contact-area">
+              <p style="font-size: 0.85rem; opacity: 0.8; text-align: center;" data-en="Need instant help?" data-zh="需要即时帮助吗？"></p>
+              <button class="cta-button" onclick="openContactDesk()" data-en="QUICK CONTACT" data-zh="快速联系"></button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION: LEADERSHIP (Below) -->
   <section class="section dark">
     <div class="container">
-      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px;" data-en="Meet Our Leadership" data-zh="会见我们的领导团队"></h2>
+      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;" data-en="Our Leadership" data-zh="会见我们的领导团队"></h2>
       <div class="team-container">
           <div class="member-card">
               <img src="images/nathanael.png" alt="Nathanael" class="member-photo">
