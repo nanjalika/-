@@ -92,8 +92,9 @@ nav a.active::after {
     right: 0;
     bottom: -8px;
     height: 3px;
-    background: var(--paleblue);
-    border-radius: 999px;
+    background: var(--navy);
+   border: 1px solid var(--paleblue);
+    border-radius: 2px;
 }
 
 /* --- 3. HERO & SECTIONS --- */
@@ -179,14 +180,14 @@ button, .btn, .btn-download, input[type="submit"] {
 }
 
 button:hover, .btn:hover, input[type="submit"]:hover {
-    background: var(--paleblue);
+    background: var(--navy);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* --- 7. TEAM & LEADERSHIP --- */
 .member-card {
-    background: var(--navy-light);
+    background: var(--navy);
     border-radius: 15px;
     width: 350px;
     text-align: center;
@@ -245,6 +246,7 @@ button:hover, .btn:hover, input[type="submit"]:hover {
     background: var(--paleblue);
     color: var(--navy);
     padding: 4px 10px;
+    border: 1px solid var(--paleblue);
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: bold;
