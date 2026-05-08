@@ -153,8 +153,7 @@
     <section class="cta-section">
         <div class="cta-box">
             <h2 class="lang-en" data-en="Ready to grow with Zhongtandazi?" data-zh="准备好与中坦达资共同成长吗？"></h2>
-            <button class="cta-button lang-en" data-en="Contact Desk" data-zh="联系台"></button>
-            <button class="cta-button lang-zh" data-en="Contact Desk" data-zh="联系台"></button>
+            <button class="cta-button" onclick="openContactDesk()" data-en="Contact Desk" data-zh="联系台"></button>
         </div>
     </section>
 </div>
@@ -230,6 +229,39 @@
   </div>
 </div>
 
+<div id="contactDeskPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeContactDesk()">×</span>
+    <h3 data-en="Investment Desk" data-zh="投资咨询台">Investment Desk</h3>
+    <p data-en="Choose your preferred way to reach our experts." data-zh="选择您喜欢的沟通方式联系我们的专家。">Choose your preferred way to reach our experts.</p>
+    
+    <div class="contact-quick-grid">
+        <a href="https://wa.me/255XXXXXXXXX" class="contact-item">
+            <div class="contact-icon">📱</div>
+            <h4 data-en="WhatsApp" data-zh="WhatsApp">WhatsApp</h4>
+            <p>+255 XXX XXX XXX</p>
+        </a>
+
+        <div class="contact-item" onclick="alert('WeChat ID: Zhongtandazi')">
+            <div class="contact-icon">💬</div>
+            <h4 data-en="WeChat" data-zh="微信">WeChat</h4>
+            <p>ID: Zhongtandazi</p>
+        </div>
+
+        <a href="mailto:info@zhongtandazi.com" class="contact-item">
+            <div class="contact-icon">📧</div>
+            <h4 data-en="Email" data-zh="电子邮件">Email</h4>
+            <p>info@zhongtandazi.com</p>
+        </a>
+
+        <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <h4 data-en="Office" data-zh="办公地址">Office</h4>
+            <p>Dar es Salaam, Tanzania</p>
+        </div>
+    </div>
+  </div>
+</div>
 <script src="script.js"></script>
 <!-- Sector Detail Popup -->
 <div id="sectorPopup" class="modal" style="display: none;">

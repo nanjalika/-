@@ -810,3 +810,40 @@ body.modal-open {
         grid-template-columns: 1fr; /* Force cards to stack vertically on mobile */
     }
 }
+/* Styling the grid inside the existing popup style */
+.contact-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for Desktop */
+    gap: 10px;
+    margin: 20px;
+}
+
+.contact-item {
+    background: rgba(0, 51, 102, 0.05); /* Very light Navy tint to match your brand */
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #003366; /* Your Navy brand color */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+}
+
+.contact-item:hover {
+    background: var(--paleblue);
+    border-color: var(--navy-light); /* Your Pale Blue color */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* Mobile: Stack the grid items */
+@media (max-width: 600px) {
+    .contact-quick-grid {
+        grid-template-columns: 1fr;
+    }
+}

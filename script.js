@@ -267,3 +267,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     }
 });
+function openContactDesk() {
+    document.getElementById('contactDeskPopup').style.display = 'block';
+    // Lock the background scroll just like your other popups
+    document.body.classList.add('modal-open'); 
+}
+
+function closeContactDesk() {
+    document.getElementById('contactDeskPopup').style.display = 'none';
+    // Release the background scroll
+    document.body.classList.remove('modal-open'); 
+}
