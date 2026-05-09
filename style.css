@@ -846,18 +846,19 @@ body.modal-open {
     }
 }
 /* ==========================================================================
-   MOBILE-FIRST OPTIMIZATION (iPhone & Android)
+   MASTER MOBILE CONTROLLER (index.html)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* 1. HEADINGS: Automated Scaling */
+
+    /* 1. GLOBAL TYPOGRAPHY & ELEMENT CONTROL */
     h1 {
-        font-size: 2.5rem !important; /* Your main titles */
+        font-size: 2.5rem !important; /* Large, premium title */
         line-height: 1.2 !important;
         margin-bottom: 20px !important;
     }
 
     h2 {
-        font-size: 2.0rem !important; /* Secondary section titles */
+        font-size: 2.0rem !important;
         line-height: 1.3 !important;
     }
 
@@ -866,203 +867,114 @@ body.modal-open {
     }
 
     h4, h5, h6 {
-        font-size: 1.4rem !important; /* Smaller headings */
+        font-size: 1.4rem !important;
     }
 
-    /* 2. BODY TEXT & PARAGRAPHS */
     p, li, span, label {
         font-size: 1.15rem !important; /* Increased for mobile readability */
         line-height: 1.6 !important;
     }
 
-    /* 3. LINKS & NAVIGATION ITEMS */
-    a {
-        font-size: 1.1rem !important; 
-    }
-
-    /* 4. BUTTONS & BUTTON TEXT */
-    /* This targets standard buttons and your .btn classes */
-    button, 
-    .btn, 
-    .btn-large, 
-    input[type="submit"] {
-        font-size: 1.25rem !important; /* Bold, clear button text */
+    /* Buttons & Tapping Targets */
+    button, .btn, .btn-large, input[type="submit"] {
+        font-size: 1.25rem !important;
         font-weight: 600 !important;
-        padding: 15px 25px !important; /* Larger hit area for fingers */
-        width: auto; /* Default, unless you want them 100% width */
-        display: inline-block;
+        padding: 16px 28px !important;
+        border-radius: 8px !important;
     }
 
-    /* 5. FORM INPUTS */
-    input, select, textarea {
-        font-size: 1.1rem !important; /* Prevents iOS auto-zoom on focus */
-        padding: 12px !important;
-    }
-
-    /* 6. LISTS & BULLETS */
-    ul, ol {
-        padding-left: 20px !important;
-    }
-
-    /* 7. FORCE WIDTH LOGIC */
-    /* This ensures no element "breaks" the screen width on phones */
-    .container, .main-content, section {
-        width: 100% !important;
-        overflow-x: hidden !important;
-    }
-
-    /* 1. RESET & SPACING: Ensure everything fits the phone width */
-    .container {
-        padding: 0 15px !important;
-        width: 100% !important;
-    }
-
-    .section {
-        padding: 40px 0 !important;
-    }
-
-    /* 2. HERO CONTENT: Scaling text for small screens */
-    .hero h1 {
-        font-size: 3.4rem !important; /* Large, bold, and readable */
-        margin: 15px 20px !important;
-        line-height: 1.3 !important;
-    }
-
-    .hero p {
-        font-size: 2rem !important;
-        padding: 0 10px !important;
-        line-height: 1.5 !important;
-    }
-
-    /* 3. HOME BUTTONS: Column of two rows (The core change) */
-    .button-container {
-        flex-direction: column !important; /* Stacks the buttons */
-        align-items: center !important;
-        gap: 30px !important;
-        padding-top: 50px !important;
-        width: 60% !important;
-        margin: 0 auto !important;
-    }
-
-    .btn-large {
-        width: 90% !important; /* Stretches button for easy clicking */
-        min-width: unset !important;
-        text-align: center !important;
-        font-size: 1.2rem !important;
-        padding: 18px !important;
-        border-radius: 12px !important; /* Modern rounded look for mobile */
-    }
-
-    /* 4. STATS GRID: 3 columns becomes 1 column */
-    #stats .grid {
-        grid-template-columns: 1fr !important; /* Vertical stack */
-        gap: 35px !important;
-        text-align: center !important;
-    }
-
-    .stat h2 {
-        font-size: 3rem !important; /* Large numbers */
-        margin-bottom: 5px !important;
-    }
-
-    .stat p {
-        font-size: 1.1rem !important;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding-bottom: 20px !important;
-        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
-        border-width: 70% !important;
-    }
-
-    /* 5. FIXING "OVERFLOW" CRACKS: Prevents side-scrolling on iPhones */
-    html, body {
-        overflow-x: hidden !important;
-        position: relative;
-    }
-
-    /* 6. GENERAL ELEMENTS STRETCHING */
-    img, .video-container, hr {
-        max-width: 100% !important;
-    }
-
-    hr {
-        width: 80% !important;
-        margin: 30px auto !important;
-        opacity: 0.3;
-    }
-}
-/* ==========================================================================
-   MOBILE HEADER, NAV LIST, & FOOTER (Updated Alignment)
-   ========================================================================== */
-@media (max-width: 768px) {
-
-    /* 1. HEADER AREA: Keep layout, but increase size */
+    /* 2. HEADER AREA (Size & Visibility) */
     .header {
-        padding: 20px 0 !important; /* Give the header more height */
+        padding: 15px 0 !important;
     }
 
     .logo img {
-        height: 55px !important; /* Larger logo for mobile visibility */
+        height: 55px !important; /* Increased for visibility */
         width: auto;
     }
 
     .logo h2 {
-        font-size: 1.6rem !important; /* Larger company name */
+        font-size: 1.6rem !important; /* Clear company name */
     }
 
-    /* The Hamburger (Three Bars) - Larger and clearer */
     #hamburger {
-        font-size: 32px !important;
-        padding: 5px !important;
+        font-size: 32px !important; /* Large, clear 3 bars */
     }
 
-    /* 2. NAVIGATION LIST: Align the links to the center when open */
+    /* 3. NAVIGATION MENU (Centered List) */
     nav {
-        display: none; /* Controlled by your JS toggle */
+        display: none; /* Controlled by your JS */
         flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important; /* THIS centers the list items */
+        align-items: center !important; /* Centers links vertically and horizontally */
         text-align: center !important;
-        background: var(--navy-light) !important;
-        width: 100% !important;
         padding: 30px 0 !important;
+        background: var(--navy-light) !important;
     }
 
     nav a {
         display: block !important;
         width: 100% !important;
-        padding: 15px 0 !important; /* Bigger tapping area */
+        padding: 15px 0 !important;
+        font-size: 1.4rem !important;
         margin: 0 !important;
-        font-size: 1.4rem !important; /* Larger font for menu links */
-        border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle divider */
     }
 
-    nav a:last-child {
-        border-bottom: none;
+    /* 4. HOME PAGE HERO (Button Stacking) */
+    .hero {
+        padding: 80px 0 !important;
+        height: auto !important;
+        min-height: 100vh;
     }
 
-    /* 3. FOOTER: Beautiful size increase without extra gaps */
+    .button-container {
+        flex-direction: column !important; /* Column of two rows */
+        align-items: center !important;
+        gap: 15px !important;
+        padding-top: 40px !important;
+        width: 100% !important;
+    }
+
+    .btn-large {
+        width: 90% !important; /* Stretches to fit phone screen */
+        text-align: center !important;
+    }
+
+    /* 5. STATS SECTION (Single Column) */
+    #stats .grid {
+        grid-template-columns: 1fr !important; /* Vertical stack */
+        gap: 40px !important;
+        text-align: center !important;
+    }
+
+    .stat h2 {
+        font-size: 3.2rem !important;
+        color: var(--paleblue);
+    }
+
+    /* 6. FOOTER (Beautiful Sizing & Alignment) */
     .footer {
         padding: 40px 20px !important;
+        text-align: center !important;
     }
 
     .footer p {
-        font-size: 1.2rem !important; /* Easy to read on a phone */
-        line-height: 1.6 !important;
-        margin-bottom: 10px !important;
+        font-size: 1.2rem !important; /* Readable footer text */
+        margin-bottom: 15px !important;
     }
 
     .footer a {
         font-size: 1.1rem !important;
-        font-weight: 500 !important;
-        text-decoration: underline;
         margin: 0 10px !important;
+        text-decoration: underline;
     }
 
-    /* Small copyright text at the bottom */
-    .footer .copyright {
-        font-size: 1rem !important;
-        margin-top: 20px !important;
-        opacity: 0.9;
+    /* 7. SCREEN PROTECTION */
+    html, body {
+        overflow-x: hidden !important; /* Prevents side-scrolling mess */
+        width: 100% !important;
+    }
+
+    .container {
+        padding: 0 15px !important;
     }
 }
