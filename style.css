@@ -854,7 +854,7 @@ body.modal-open {
     h1 {
         font-size: 2.5rem !important; /* Large, premium title */
         line-height: 1.2 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 25px !important;
     }
 
     h2 {
@@ -863,21 +863,21 @@ body.modal-open {
     }
 
     h3 {
-        font-size: 1.75rem !important;
+        font-size: 1.8rem !important;
     }
 
     h4, h5, h6 {
-        font-size: 1.4rem !important;
+        font-size: 1.5rem !important;
     }
 
     p, li, span, label {
-        font-size: 1.15rem !important; /* Increased for mobile readability */
+        font-size: 1.3rem !important; /* Increased for mobile readability */
         line-height: 1.6 !important;
     }
 
     /* Buttons & Tapping Targets */
     button, .btn, .btn-large, input[type="submit"] {
-        font-size: 1.25rem !important;
+        font-size: 1.3rem !important;
         font-weight: 600 !important;
         padding: 16px 28px !important;
         border-radius: 8px !important;
@@ -885,22 +885,29 @@ body.modal-open {
 
     /* 2. HEADER AREA (Size & Visibility) */
     .header {
-        padding: 15px 0 !important;
+        padding: 30px 0 !important;
     }
 
     .logo img {
-        height: 55px !important; /* Increased for visibility */
+        height: 70px !important; /* Increased for visibility */
         width: auto;
     }
 
     .logo h2 {
-        font-size: 1.6rem !important; /* Clear company name */
+        font-size: 2.5rem !important; /* Clear company name */
     }
 
     #hamburger {
         font-size: 32px !important; /* Large, clear 3 bars */
+        border: none !important;
+        background: none !important;
+        color: var(--white) !important;
     }
 
+    #hamburger:hover {
+        color: var(--paleblue) !important;
+        box-shadow: none !important;
+    }
     /* 3. NAVIGATION MENU (Centered List) */
     nav {
         display: none; /* Controlled by your JS */
@@ -913,7 +920,8 @@ body.modal-open {
 
     nav a {
         display: block !important;
-        width: 100% !important;
+        width: 80% !important;
+        height: auto !important;
         padding: 15px 0 !important;
         font-size: 1.4rem !important;
         margin: 0 !important;
@@ -935,7 +943,7 @@ body.modal-open {
     }
 
     .btn-large {
-        width: 90% !important; /* Stretches to fit phone screen */
+        width: 60% !important; /* Stretches to fit phone screen */
         text-align: center !important;
     }
 
@@ -958,12 +966,12 @@ body.modal-open {
     }
 
     .footer p {
-        font-size: 1.2rem !important; /* Readable footer text */
+        font-size: 1.3rem !important; /* Readable footer text */
         margin-bottom: 15px !important;
     }
 
     .footer a {
-        font-size: 1.1rem !important;
+        font-size: 1.3rem !important;
         margin: 0 10px !important;
         text-decoration: underline;
     }
