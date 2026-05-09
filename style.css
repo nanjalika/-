@@ -881,6 +881,7 @@ body.modal-open {
         gap: 30px !important;
         padding-top: 50px !important;
         width: 60% !important;
+        margin: 0 auto !important;
     }
 
     .btn-large {
