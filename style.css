@@ -863,13 +863,13 @@ body.modal-open {
 
     /* 2. HERO CONTENT: Scaling text for small screens */
     .hero h1 {
-        font-size: 2.4rem !important; /* Large, bold, and readable */
-        margin: 10px 15px !important;
-        line-height: 1.2 !important;
+        font-size: 3.4rem !important; /* Large, bold, and readable */
+        margin: 15px 20px !important;
+        line-height: 1.3 !important;
     }
 
     .hero p {
-        font-size: 1.15rem !important;
+        font-size: 2rem !important;
         padding: 0 10px !important;
         line-height: 1.5 !important;
     }
@@ -878,9 +878,9 @@ body.modal-open {
     .button-container {
         flex-direction: column !important; /* Stacks the buttons */
         align-items: center !important;
-        gap: 15px !important;
-        padding-top: 40px !important;
-        width: 100% !important;
+        gap: 30px !important;
+        padding-top: 50px !important;
+        width: 60% !important;
     }
 
     .btn-large {
@@ -908,6 +908,7 @@ body.modal-open {
         font-size: 1.1rem !important;
         text-transform: uppercase;
         letter-spacing: 1px;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     }
 
     /* 5. FIXING "OVERFLOW" CRACKS: Prevents side-scrolling on iPhones */
