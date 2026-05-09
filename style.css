@@ -885,10 +885,9 @@ body.modal-open {
 
     /* 2. HEADER AREA (Size & Visibility) */
     .header {
-        padding-top: 40px !important;
-        padding-bottom: 30px !important;
-        padding-left: 30px !important;
-        padding-right: 30px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 20px 15px !important;
         position: fixed !important;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
     }
