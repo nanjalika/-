@@ -846,3 +846,84 @@ body.modal-open {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================================================
+   MOBILE-FIRST OPTIMIZATION (iPhone & Android)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* 1. RESET & SPACING: Ensure everything fits the phone width */
+    .container {
+        padding: 0 15px !important;
+        width: 100% !important;
+    }
+
+    .section {
+        padding: 40px 0 !important;
+    }
+
+    /* 2. HERO CONTENT: Scaling text for small screens */
+    .hero h1 {
+        font-size: 2.4rem !important; /* Large, bold, and readable */
+        margin: 10px 15px !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero p {
+        font-size: 1.15rem !important;
+        padding: 0 10px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 3. HOME BUTTONS: Column of two rows (The core change) */
+    .button-container {
+        flex-direction: column !important; /* Stacks the buttons */
+        align-items: center !important;
+        gap: 15px !important;
+        padding-top: 40px !important;
+        width: 100% !important;
+    }
+
+    .btn-large {
+        width: 90% !important; /* Stretches button for easy clicking */
+        min-width: unset !important;
+        text-align: center !important;
+        font-size: 1.2rem !important;
+        padding: 18px !important;
+        border-radius: 12px !important; /* Modern rounded look for mobile */
+    }
+
+    /* 4. STATS GRID: 3 columns becomes 1 column */
+    #stats .grid {
+        grid-template-columns: 1fr !important; /* Vertical stack */
+        gap: 35px !important;
+        text-align: center !important;
+    }
+
+    .stat h2 {
+        font-size: 3rem !important; /* Large numbers */
+        margin-bottom: 5px !important;
+    }
+
+    .stat p {
+        font-size: 1.1rem !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* 5. FIXING "OVERFLOW" CRACKS: Prevents side-scrolling on iPhones */
+    html, body {
+        overflow-x: hidden !important;
+        position: relative;
+    }
+
+    /* 6. GENERAL ELEMENTS STRETCHING */
+    img, .video-container, hr {
+        max-width: 100% !important;
+    }
+
+    hr {
+        width: 80% !important;
+        margin: 30px auto !important;
+        opacity: 0.3;
+    }
+}
