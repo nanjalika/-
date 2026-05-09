@@ -908,7 +908,9 @@ body.modal-open {
         font-size: 1.1rem !important;
         text-transform: uppercase;
         letter-spacing: 1px;
+        padding-bottom: 20px !important;
         border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        border-width: 70% !important;
     }
 
     /* 5. FIXING "OVERFLOW" CRACKS: Prevents side-scrolling on iPhones */
