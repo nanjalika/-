@@ -163,7 +163,6 @@ nav a.active::after {
 button, .btn, .btn-download, input[type="submit"] {
     background: var(--white);
     color: var(--navy);
-    border: 1px solid var(--paleblue);
     padding: 14px 28px;
     border-radius: 8px;
     cursor: pointer;
