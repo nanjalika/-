@@ -1419,7 +1419,7 @@ body.modal-open {
 
     .services-grid .card {
         flex: 0 0 auto; /* Height is content-driven */
-        width: 95%;
+        width: 100%;
         background: rgba(18, 58, 111, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
