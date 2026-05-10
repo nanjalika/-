@@ -990,3 +990,57 @@ body.modal-open {
         padding: 0 15px !important;
     }
 }
+/* 1. THE STATIC STATE (Before Hover) */
+.contact-item {
+    background-color: var(--navy-light, #123a6f); /* Professional dark blue */
+    border: 1px solid var(--paleblue, #7ebce6); /* Subtle pale blue border */
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth pop effect */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Removes link underline */
+    color: var(--white, #ffffff);
+}
+
+/* Icon Container Styling */
+.contact-icon {
+    font-size: 2rem;
+    color: var(--paleblue, #7ebce6);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item h4 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.contact-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* 2. THE HOVER STATE (During Hover) */
+.contact-item:hover {
+    background-color: var(--paleblue, #7ebce6); /* Flips to pale blue */
+    transform: translateY(-8px); /* Card lifts up */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--white);
+}
+
+/* Change text and icon colors on hover for contrast */
+.contact-item:hover h4,
+.contact-item:hover p,
+.contact-item:hover .contact-icon {
+    color: var(--navy, #0b1e3c); /* Text turns dark for readability on light blue */
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.2); /* Icon grows slightly */
+}
