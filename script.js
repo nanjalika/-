@@ -278,3 +278,21 @@ function closeContactDesk() {
     // Release the background scroll
     document.body.classList.remove('modal-open'); 
 }
+function toggleServices() {
+    const grid = document.querySelector('.services-grid');
+    const btn = document.querySelector('.show-more-btn');
+    const btnText = btn.querySelector('span');
+    
+    const isExpanded = grid.classList.toggle('expanded');
+    btn.classList.toggle('active');
+
+    // Logic to switch text based on current language and state
+    const isChinese = btnText.getAttribute('data-zh') !== null;
+    
+    if (isExpanded) {
+        btnText.innerText = isChinese ? "收起服务" : "Show Less";
+    } else {
+        btnText.innerText = isChinese ? "显示更多服务" : "Show More Services";
+        document.getElementById('what-we-do').scrollIntoView({ behavior: 'smooth' });
+    }
+}

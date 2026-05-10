@@ -1282,4 +1282,155 @@ body.modal-open {
 .contact-item:hover .contact-icon {
     transform: scale(1.2); /* Icon grows slightly */
 }
+/* ==========================================================================
+   GLOBAL SERVICES CONTAINER (Prevents section bleed)
+   ========================================================================= */
+#what-we-do .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   THE SERVICES GRID: CUSTOM SCROLLBARS (Visible White)
+   ========================================================================== */
+.services-grid::-webkit-scrollbar {
+    display: block !important; /* Forces scrollbar to show */
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Very faint white track */
+}
+
+.services-grid::-webkit-scrollbar-thumb {
+    background-color: var(--white, #ffffff) !important; /* Solid white thumb */
+    border-radius: 10px !important;
+}
+
+/* Firefox Support */
+.services-grid {
+    scrollbar-color: var(--white, #ffffff) rgba(255, 255, 255, 0.05);
+    scrollbar-width: thin;
+}
+
+/* ==========================================================================
+   DESKTOP MASTER VIEW: NARROW HORIZONTAL SCROLL
+   ========================================================================== */
+@media (min-width: 769px) {
+    .services-grid {
+        display: flex !important; /* Force cards into one row */
+        overflow-x: auto !important; /* Force horizontal scroll */
+        scroll-snap-type: x mandatory;
+        
+        /* Spacing for interaction */
+        gap: 30px;
+        padding: 40px 0 20px 0; /* padding-bottom creates room for the scrollbar */
+        margin-top: 20px;
+        perspective: 1000px;
+    }
+
+    /* Target the Scrollbar specific height for Desktop */
+    .services-grid::-webkit-scrollbar {
+        height: 6px !important;
+    }
+
+    .services-grid .card {
+        /* FIX: REDUCE WIDTH & TIGHTEN PADDING */
+        flex: 0 0 300px; /* Fixed narrow width to match text */
+        width: 300px;
+        padding: 25px; /* Reduced vertical padding (bottom space) */
+        min-height: auto !important; /* Height is determined by content */
+        
+        /* Maintain the Hybrid Style from your list (Perspective/Glass) */
+        scroll-snap-align: center;
+        background: rgba(18, 58, 111, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Active Card Pop (Style 1 from list) */
+    .services-grid .card:hover {
+        background: rgba(18, 58, 111, 0.8);
+        transform: translateY(-10px) scale(1.05);
+        border-color: var(--paleblue);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        z-index: 10;
+    }
+
+    /* Top Accent Line (Style 3 from list) */
+    .services-grid .card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 0%; height: 4px;
+        background: linear-gradient(90deg, var(--paleblue, #7ebce6), #ffffff);
+        transition: width 0.4s ease;
+    }
+    .services-grid .card:hover::before { width: 100%; }
+
+    /* Fix paragraph text for consistency in narrower cards */
+    .services-grid .card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0;
+        opacity: 0.9;
+    }
+}
+
+/* ==========================================================================
+   MOBILE MASTER VIEW: VERTICAL CONTAINER SCROLL
+   ========================================================================== */
+@media (max-width: 768px) {
+    #what-we-do.section {
+        padding: 40px 15px;
+    }
+
+    #what-we-do h1 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column; /* Force vertical stacking */
+        
+        /* FIX: MAKE GRID A SCROLLABLE CONTAINER */
+        max-height: 70vh; /* Limits height, forces inner scroll */
+        overflow-y: auto !important; /* Force vertical scroll */
+        gap: 15px;
+        padding: 10px 10px 20px 10px; /* Space for the bottom scrollbar */
+        border-radius: 15px;
+        background: rgba(11, 30, 60, 0.5); /* Subtle dark container */
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Target the Scrollbar width for Mobile */
+    .services-grid::-webkit-scrollbar {
+        width: 4px !important;
+    }
+
+    .services-grid .card {
+        flex: 0 0 auto; /* Height is content-driven */
+        width: 100%;
+        background: rgba(18, 58, 111, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .services-grid .card h3 {
+        font-size: 1.25rem;
+        color: var(--paleblue);
+        margin-bottom: 8px;
+    }
+
+    .services-grid .card p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        opacity: 0.8;
+    }
+}
 
