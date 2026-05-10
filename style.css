@@ -1286,7 +1286,7 @@ body.modal-open {
    GLOBAL SERVICES CONTAINER (Prevents section bleed)
    ========================================================================= */
 #what-we-do .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1297,17 +1297,20 @@ body.modal-open {
 .services-grid::-webkit-scrollbar {
     display: block !important; /* Forces scrollbar to show */
     background-color: rgba(255, 255, 255, 0.05) !important; /* Very faint white track */
+    padding-top: 2rem; /* Creates space for the scrollbar */
+    margin-top: 20px; /* Adds space above the scrollbar */
 }
 
 .services-grid::-webkit-scrollbar-thumb {
     background-color: var(--white, #ffffff) !important; /* Solid white thumb */
     border-radius: 10px !important;
+
 }
 
 /* Firefox Support */
 .services-grid {
     scrollbar-color: var(--white, #ffffff) rgba(255, 255, 255, 0.05);
-    scrollbar-width: thin;
+    scrollbar-width: medium;
 }
 
 /* ==========================================================================
@@ -1328,14 +1331,15 @@ body.modal-open {
 
     /* Target the Scrollbar specific height for Desktop */
     .services-grid::-webkit-scrollbar {
-        height: 6px !important;
+        height: 8px !important;
+        color: var(--paleblue);
     }
 
     .services-grid .card {
         /* FIX: REDUCE WIDTH & TIGHTEN PADDING */
         flex: 0 0 300px; /* Fixed narrow width to match text */
-        width: 300px;
-        padding: 25px; /* Reduced vertical padding (bottom space) */
+        width: 500px;
+        padding: 35px; /* Reduced vertical padding (bottom space) */
         min-height: auto !important; /* Height is determined by content */
         
         /* Maintain the Hybrid Style from your list (Perspective/Glass) */
@@ -1385,6 +1389,7 @@ body.modal-open {
 @media (max-width: 768px) {
     #what-we-do.section {
         padding: 40px 15px;
+        margin-top: 3rem !important;
     }
 
     #what-we-do h1 {
@@ -1409,11 +1414,12 @@ body.modal-open {
     /* Target the Scrollbar width for Mobile */
     .services-grid::-webkit-scrollbar {
         width: 4px !important;
+        color: var(--paleblue);
     }
 
     .services-grid .card {
         flex: 0 0 auto; /* Height is content-driven */
-        width: 100%;
+        width: 95%;
         background: rgba(18, 58, 111, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
