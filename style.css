@@ -425,7 +425,8 @@ button:hover, .btn:hover, input[type="submit"]:hover {
     text-align: center;
 }
 
-.mobile-nav a { font-size: 1.5rem; }
+.mobile-nav a { font-size: 1.5rem;
+}
 
 @media (max-width: 768px) {
     nav { display: none; }
